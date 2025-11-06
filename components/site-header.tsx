@@ -70,9 +70,8 @@ export default function SiteHeader() {
   const [showFeatures, setShowFeatures] = React.useState(false);
 
   return (
-    <div className="h-screen">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-        <div className="container max-w-6xl mx-auto flex h-14 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+        <div className="container max-w-6xl mx-auto px-4 md:px-6 flex h-18 items-center justify-between">
           <div className="flex items-center space-x-4">
             <Logo />
             <NavigationMenu className="hidden md:flex">
@@ -135,7 +134,9 @@ export default function SiteHeader() {
                               numbers
                             </p>
                           </div>
-                          <Button variant="secondary">Get started</Button>
+                          <Button variant="secondary">
+                            <Link href="/get-started">Get started</Link>
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -259,6 +260,5 @@ export default function SiteHeader() {
           </Sheet>
         </div>
       </header>
-    </div>
   );
 }
